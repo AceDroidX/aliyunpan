@@ -1,8 +1,8 @@
-FROM python:buster
+FROM python:3-alpine
 
 COPY .  /src/
 
-RUN pip install -r  /src/requirements.txt
+RUN pip install --no-cache-dir -r  /src/requirements.txt
 
 ENV ALIYUNPAN_CONF  "/data/aliyunpan.yaml"
 
